@@ -1,0 +1,48 @@
+Usage Permission: 
+
+Creative Commons Attribution 4.0 International licence
+-) Citation of Source, Documentation of Changes made
+-) Reuse for non-commercial purposes allowed
+
+Citation:
+Source: 10.2908/nrg_chddr2_m, 09/08/2025
+https://ec.europa.eu/eurostat/databrowser/view/nrg_chddr2_m__custom_17979334/default/table?lang=en
+
+
+Table Link:
+https://ec.europa.eu/eurostat/databrowser/view/nrg_chddr2_m__custom_17979334/default/table?lang=en
+
+Meta Data Link:
+https://ec.europa.eu/eurostat/cache/metadata/en/nrg_chdd_esms.htm
+
+File Metadata:
+Online data code:
+nrg_chddr2_m
+Source of data:
+Eurostat
+Statistical theme:
+Environment and energy ; General and regional statistics ; Cross cutting topics
+Last data update:
+28/03/2025 23:00 (5 months ago)
+Last structure update:
+28/03/2025 23:00 
+Data coverage:
+1979-01 - 2024-12
+Number of cells:
+1 688 389
+
+Statistical concepts and definitions
+Heating Degree Days (HDD) index:  the severity of the cold in a specific time period taking into consideration outdoor temperature and average room temperature (in other words the need for heating). The calculation of HDD relies on the base temperature, defined as the lowest daily mean air temperature not leading to indoor heating. The value of the base temperature depends in principle on several factors associated with the building and the surrounding environment. By using a general climatological approach, the base temperature is set to a constant value of 15°C in the HDD calculation. 
+
+If Tm ≤ 15°C Then [HDD = ∑i(18°C - Tim)] Else [HDD = 0] where Tim is the mean air temperature of day i.
+
+Examples: If the daily mean air temperature is 12°C, for that day the value of the HDD index is 6 (18°C-12°C). If the daily mean air temperature is 16°C, for that day the HDD index is 0.
+
+ 
+
+Cooling degree days (CDD) index:  the severity of the heat in a specific time period taking into consideration outdoor temperature and average room temperature (in other words the need for cooling). The calculation of CDD relies on the base temperature, defined as the highest daily mean air temperature not leading to indoor cooling. The value of the base temperature depends in principle on several factors associated with the building and the surrounding environment. By using a general climatological approach, the base temperature is set to a constant value of 24°C in the CDD calculation.
+
+If Tm ≥ 24°C Then [CDD = ∑iTim - 21°C)] Else [CDD = 0] where Tim is the mean air temperature of day i.
+
+Examples: If the daily mean air temperature is 26°C, for that day the value of the CDD index is 5 (26°C-21°C). If the daily mean air temperature is 22°C, for that day the CDD index is 0.
+These calculations are executed on a daily basis, added up to a calendar months and subsequently to calendar years.

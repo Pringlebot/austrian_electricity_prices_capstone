@@ -1,0 +1,5 @@
+Data Source:
+https://markt.apg.at/en/transparency/cross-border-exchange/day-ahead-prices/
+Data Owner: https://www.exaa.at/
+
+APG publishes both the price of the Market Coupling Auction and the price of the 10:15 auction of EXAA for the Day-Ahead Market. In the event of full-decoupling (no result from the Market Coupling Auction) and consequently different local prices of the active electricity exchanges in Market Coupling, APG calculates a Day-Ahead Reference Price (volume-weighted average price) for Austria.

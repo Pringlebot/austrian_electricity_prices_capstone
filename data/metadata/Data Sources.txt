@@ -1,0 +1,37 @@
+Energy Prices:
+Day-Ahead-Prices Austria, Germany, Luxembourg: SMARD C:\Users\paulr\Desktop\Capstone\Data\Prices
+Day-Ahead Prices Austria (15min) - 2015-2022 - APG C:\Users\paulr\Desktop\Capstone\Data\Austria\Day Ahead Preise
+Für Preise nach 2022 REST API nutzen: https://transparency.apg.at/api/swagger/index.html
+
+
+Physical Statistics:
+Monthly Hourly Load Values (= Consumption): ENTSOE C:\Users\paulr\Desktop\Capstone\Data\Demand
+Net Generating Capacity (=Available Power): ENTSOE C:\Users\paulr\Desktop\Capstone\Data\Production
+Phsysical Data Austria (hourly): econtrol - el_dataset_h.xlsx
+
+ETS Carbon Prices:
+(History Emission Spot Primary Market Auction Report 2012 - 2024 EEX C:\Users\paulr\Desktop\Capstone\Data\ETS Spot Market)
+
+C:\Users\paulr\Desktop\Capstone\data\raw\Carbon_Prices
+ICAP Allowance Price Explorer
+https://icapcarbonaction.com/en/ets-prices
+
+
+Brent Oil Prices:
+C:\Users\paulr\Desktop\Capstone\Data\Oil Prices
+https://fred.stlouisfed.org/series/DCOILBRENTEU
+^Suggested Citation:
+U.S. Energy Information Administration, Crude Oil Prices: Brent - Europe [DCOILBRENTEU], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/DCOILBRENTEU, August 6, 2025.
+
+Carbon Prices:
+C:\Users\paulr\Desktop\Capstone\Data\Carbon Prices
+https://icapcarbonaction.com/en/ets-prices
+
+EU Electricity Market Reports 2015-2023
+https://energy.ec.europa.eu/data-and-analysis/market-analysis_en
+https://circabc.europa.eu/ui/group/3ef9355f-1ffe-4c82-ba19-f60a3ed2f652/library/8c97e9f3-4a06-487b-8579-6c1b3d550656
+
+Climate Data:
+Heating & Cooling Degree Days:
+C:\Users\paulr\Desktop\Capstone\Data\Climate Data
+https://ec.europa.eu/eurostat/databrowser/view/nrg_chddr2_m__custom_17679686/default/table
