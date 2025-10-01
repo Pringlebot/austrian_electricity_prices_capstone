@@ -14,13 +14,13 @@ capstone_env/
 *.ipynb_checkpoints
 
 # Data (optional - entscheide selbst)
-data/raw/
 *.csv
 *.xlsx
 notes_ignore/
 Literature/
 docs/
 claude/
+data\raw\_ignore
 # IDE
 .vscode/
 .idea/
