@@ -20,7 +20,9 @@ notes_ignore/
 Literature/
 docs/
 claude/
-data\raw\_ignore
+data/raw/_ignore/
+data/processed/backup
+
 # IDE
 .vscode/
 .idea/

@@ -411,7 +411,7 @@ def consolidate_electricity_data(raw_data_path, output_path, verbose=True):
     
     if len(final_df) > 0:
         # Save to file
-        final_df.to_csv(output_path, index=False)
+        final_df.to_csv(output_path, index=False, na_rep='')
         
         if verbose:
             print(f"SUCCESS: {len(final_df)} rows saved to {output_path}")

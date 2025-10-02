@@ -274,7 +274,7 @@ def merge_climate_with_consolidated_data(climate_df, consolidated_file_path, out
         merged_df = merged_df.sort_values(['date', 'aggregation_level']).reset_index(drop=True)
         
         final_path = output_dir / "data_consolidated.csv"
-        merged_df.to_csv(final_path, index=False)
+        merged_df.to_csv(final_path, index=False, na_rep='')
         
         return merged_df
         
@@ -368,7 +368,7 @@ def consolidate_climate_data(raw_file_path, consolidated_file_path, output_dir, 
         
         # Save climate dataset
         climate_path = output_dir / "climate_consolidated.csv"
-        climate_long.to_csv(climate_path, index=False)
+        climate_long.to_csv(climate_path, index=False, na_rep='')
         
         if verbose:
             print(f"  Climate dataset saved: {climate_path}")

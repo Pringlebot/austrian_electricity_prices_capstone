@@ -376,7 +376,7 @@ def merge_carbon_with_electricity(carbon_df, electricity_file_path, output_dir):
         merged_df = merged_df.sort_values(['date', 'aggregation_level']).reset_index(drop=True)
         
         final_path = output_dir / "data_consolidated.csv"
-        merged_df.to_csv(final_path, index=False)
+        merged_df.to_csv(final_path, index=False, na_rep='')
         
         return merged_df
         
@@ -466,7 +466,7 @@ def consolidate_carbon_data(raw_file_path, electricity_file_path, output_dir, ve
         
         # Save carbon dataset
         carbon_path = output_dir / "carbon_consolidated.csv"
-        carbon_df.to_csv(carbon_path, index=False)
+        carbon_df.to_csv(carbon_path, index=False, na_rep='')
         
         if verbose:
             print(f"  Carbon dataset saved: {carbon_path}")
