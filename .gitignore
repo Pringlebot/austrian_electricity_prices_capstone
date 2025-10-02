@@ -16,7 +16,7 @@ capstone_env/
 # Data (optional - entscheide selbst)
 *.csv
 *.xlsx
-notes_ignore/
+docs_ignore/
 Literature/
 docs/
 claude/
