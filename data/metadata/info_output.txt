@@ -1,0 +1,67 @@
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 4663 entries, 0 to 4662
+Data columns (total 60 columns):
+ #   Column                                Non-Null Count  Dtype         
+---  ------                                --------------  -----         
+ 0   date                                  4663 non-null   object        
+ 1   year                                  4663 non-null   float64       
+ 2   month                                 4663 non-null   float64       
+ 3   quarter                               4663 non-null   float64       
+ 4   week                                  4663 non-null   float64       
+ 5   aggregation_level                     4663 non-null   object        
+ 6   price_exaa_mean                       3440 non-null   float64       
+ 7   price_mc_auction_mean                 2439 non-null   float64       
+ 8   price_count_exaa                      4590 non-null   float64       
+ 9   price_count_mc                        4590 non-null   float64       
+ 10  data_completeness                     4590 non-null   float64       
+ 11  month_name                            4663 non-null   object        
+ 12  carbonprices_exchange_rate_eur_usd    3136 non-null   float64       
+ 13  carbonprices_primary_market           2859 non-null   float64       
+ 14  carbonprices_secondary_market         689 non-null    float64       
+ 15  climate_cdd_at                        152 non-null    float64       
+ 16  climate_hdd_at                        152 non-null    float64       
+ 17  climate_cdd_eu                        152 non-null    float64       
+ 18  climate_hdd_eu                        152 non-null    float64       
+ 19  prod_gross_electricity_production     187 non-null    float64       
+ 20  prod_gross_electricity_consumption    187 non-null    float64       
+ 21  prod_hydropower_production_total      187 non-null    float64       
+ 22  prod_fossil_sk_production             187 non-null    float64       
+ 23  prod_fossil_DvfB_production           187 non-null    float64       
+ 24  prod_fossil_DvOe_production           187 non-null    float64       
+ 25  prod_fossil_gas_production            187 non-null    float64       
+ 26  prod_fossil_subtotal_production       187 non-null    float64       
+ 27  prod_renewable_bio_production         187 non-null    float64       
+ 28  prod_renewable_SoBio_production       187 non-null    float64       
+ 29  prod_other_fuels_production           187 non-null    float64       
+ 30  prod_fuel_production_total            187 non-null    float64       
+ 31  prod_wind_total                       187 non-null    float64       
+ 32  prod_pv_total                         187 non-null    float64       
+ 33  prod_geothermal_total                 184 non-null    float64       
+ 34  prod_power_production_total           187 non-null    float64       
+ 35  prod_electricity_imports              187 non-null    float64       
+ 36  prod_electricity_exports              187 non-null    float64       
+ 37  oegpi_month                           69 non-null     float64       
+ 38  oegpi_quarter                         23 non-null     float64       
+ 39  oegpi_season                          11 non-null     float64       
+ 40  oegpi_year                            23 non-null     float64       
+ 41  econ_prod_index_industry              55 non-null     float64       
+ 42  econ_consumer_price_index             115 non-null    float64       
+ 43  econ_exports_total_EUR                198 non-null    float64       
+ 44  econ_turnover_index_commercial_sales  54 non-null     float64       
+ 45  econ_count_overnight_stays            199 non-null    float64       
+ 46  econ_turnover_industry                5 non-null      float64       
+ 47  econ_count_employees_industry         5 non-null      float64       
+ 48  econ_prod_index_construction          55 non-null     float64       
+ 49  econ_total_production_construction    5 non-null      float64       
+ 50  econ_turnover_index_construction      55 non-null     float64       
+ 51  econ_turnover_construction            5 non-null      float64       
+ 52  econ_count_employees_construction     5 non-null      float64       
+ 53  econ_turnover_index_wholesale         54 non-null     float64       
+ 54  econ_turnover_index_retail            54 non-null     float64       
+ 55  econ_count_employees_retail           54 non-null     float64       
+ 56  econ_turnover_index_car_retail        54 non-null     float64       
+ 57  econ_imports_total_EUR                198 non-null    float64       
+ 58  econ_imports_energy_EUR               198 non-null    float64       
+ 59  date_dt                               4663 non-null   datetime64[ns]
+dtypes: datetime64[ns](1), float64(56), object(3)
+memory usage: 2.1+ MB
