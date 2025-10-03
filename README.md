@@ -225,10 +225,27 @@ bashpython src/data_consolidated_diagnostics.py
 Validates:
 
 ## Data structure and completeness
-Missing value patterns
-Aggregation level consistency
-Data type correctness
-Architectural constraints
+The following were implemented:
+- Missing value patterns
+- Aggregation level consistency
+- Data type correctness
+- Architectural constraints
+
+## Which dataset to use?
+
+Processed Data without QoL additions:
+```bash
+data_consolidated.csv
+```
+
+Data finalized with QoL additions:
+```bash
+data_finalized.csv
+```
+Additions include:
+- additional datetime object column for date: "date_dt"
+
+
 
 ## Data Sources & Licenses
 All datasets are from public sources with appropriate usage permissions:
