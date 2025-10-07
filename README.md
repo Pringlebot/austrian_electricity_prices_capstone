@@ -3,7 +3,14 @@ Paul Ringler´s Capstone Project for the 2025 "Data Practictioner" class at neue
 
 Time series analysis and forecasting of European energy market prices using ARIMA/ARIMAX modeling.
 
-## Project Overview
+## About this Project
+
+
+This is a **learning project** created to practice time series analysis and 
+data pipeline development. The analyses are exploratory in nature and not 
+intended for professional forecasting or investment decisions.
+
+All data sources are properly attributed. See the data documentation for details.
 
 This project analyzes Austrian electricity day-ahead prices using ARIMA (AutoRegressive Integrated Moving Average) models, with potential extension to ARIMAX models incorporating external variables like CO2 prices, climate data, and economic indicators.
 
