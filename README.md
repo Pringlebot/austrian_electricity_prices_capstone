@@ -95,6 +95,66 @@ Complete variable documentation with sources and links is available in:
 | **Gas Prices** | 4 | Austrian natural gas price indices (monthly, quarterly, seasonal, annual) | Monthly only |
 | **Economic Indicators** | 18 | Production indices, trade, employment, turnover | Monthly only |
 
+
+### Time Series Decomposition
+Multiplicative seasonal decomposition (Y = T × S × R) was selected 
+after comparing residual variance with the additive model (0.17 vs 31.69). 
+The multiplicative model is appropriate as seasonal variation scales 
+proportionally with price level (±20% rather than constant absolute swings).
+
+Seasonal strength analysis reveals moderate seasonality (0.36 for full 
+period, 0.40 pre-shock), with December showing highest prices (96.85 EUR/MWh) 
+and May lowest (57.00 EUR/MWh). The seasonal component ranges from 0.78 to 
+1.15 (multiplicative factors), representing ±20% variation around trend.
+
+However, the price shock period (2021-2023) dominates the variance structure, 
+with residual volatility exceeding seasonal effects by 5x. This justifies 
+the inclusion of regime dummy variables in the ARIMAX specification.
+For "Stationarity Analysis" Section:
+markdown#### Augmented Dickey-Fuller Test
+
+Formal stationarity testing via ADF reveals:
+- Full period (2015-2025): p=0.144, non-stationary
+- Pre-shock (2015-2021): p=0.991, strongly non-stationary  
+- Post-shock (2023-2025): p=0.044, stationary
+
+The full series requires first differencing (d=1). Interestingly, the 
+post-shock period is stationary, suggesting the market has stabilized 
+into a "new normal" regime without persistent trend. This finding 
+supports the use of regime dummies to capture structural breaks rather 
+than relying solely on differencing.
+
+PACF analysis corroborates the ADF results, with Lag 1 = 0.90 indicating 
+strong autocorrelation characteristic of non-stationary series.
+
+## Forecasting Methodology
+
+### Temporal Scope
+Due to publication delays of exogenous variables (up to 52 weeks for climate indicators), this project implements **retrospective validation** rather than 
+real-time forecasting:
+
+- **Training Period:** 2015-01 to 2024-12 (120 months)
+- **Test Period:** 2025-01 to 2025-09 (9 months, out-of-sample)
+
+### Data Availability Considerations
+All exogenous variables are used without temporal lags (lag-0), as the 
+validation is performed retrospectively when all 2024 data has been published. 
+This approach:
+
+1. **Measures historical relationships** between contemporaneous variables
+2. **Validates model structure** on unseen data (available data points from 2025)
+3. **Avoids complexity** of mixed-lag specifications for a learning project
+
+**Note:** For operational real-time forecasts, variables would need to be 
+lagged according to their publication schedules (e.g., economic indicators 
+lag-2 to lag-12, gas futures available lag-0).
+
+### Cross-Validation Strategy
+Time series cross-validation with expanding window:
+- 5-fold splits within training period
+- Chronological ordering preserved
+- No data leakage from future to past
+
 ### Key Variables for ARIMAX Modeling
 
 **Outcome Variable:**
