@@ -5,10 +5,13 @@ Time series analysis and forecasting of European energy market prices using ARIM
 
 ## About this Project
 
-
+**What this project is**
 This is a **learning project** created to practice time series analysis and 
 data pipeline development. The analyses are exploratory in nature and not 
 intended for professional forecasting or investment decisions.
+
+**What this project isn´t**
+This project is not a thorough econometric analysis of the Austrian Energy market. While the outcome variable and its development over time will be put into historical and economic context and while input variables like gas prices, CO2 prices and available economic indicatores are used, there is no further consideration of the economic basis of the energy market.
 
 All data sources are properly attributed. See the data documentation for details.
 
