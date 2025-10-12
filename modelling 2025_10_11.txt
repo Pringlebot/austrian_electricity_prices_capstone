@@ -1,0 +1,46 @@
+How to choose correct model:
+
+1. AR: look at autocorrelations. pick AR term according to PACF. ideally, when ACF tapers, AR(1) is ideal. another "ideal" model shows sinusiodal ACF and PACF. This indicates the use of AR(2).
+2. MA: for an MA(1) model ideally autocorrelation should show some sinusiodal structure with non-significant spikes at higher lags
+3. combined ARMA model: if there is a lot of memory in the system, where current values are determined both by previous values, as well as random-noise and random noise patterns influenced by previous random noise patterns.
+-> data seems to indicate an ARMA model
+
+
+workflow in ml model-building
+
+workflow in ml model-building
+1. split train-test
+2. feature scaling: scale both datasets
+3. train baseline-test model, model diagnostics
+1. use test data on baseline model, use scales from us train set only to avoid data leakage!
+2. compare results to non-prediction (e.g. same as yesterday)
+3. iterative improvement: build more complex models, compare to non-prediction & baseline + model diagnostics
+4. iterative improvement: hyperparameter tuning 
+5. cross-validation
+6. model-calibration
+
+
+BASELINE MODEL PERFORMANCE:
+Persistence:    RMSE=29.37, MAE=20.20, MAPE=19.5%, Bias=-13.90, Max Error=68.00
+Seasonal Naive: RMSE=54.19, MAE=47.30, MAPE=54.8%, Bias=-12.80, Max Error=104.00
+
+Best model by AIC: ARIMA(2, 1, 0)
+                RMSE=27.04, MAE=19.93, MAPE=20.8%, Bias=-7.45, Max Error=61.42
+Ljung-Box Test (H0: No autocorrelation):
+      lb_stat  lb_pvalue
+12  21.489850   0.043651
+24  26.451728   0.330650
+
+Shapiro-Wilk Test (H0: Normal distribution):
+  Statistic=0.7074, p-value=0.0000
+
+Best ARIMAX model by AIC: ARIMAX(2, 1, 0)
+  RMSE=28.40, MAE=21.37, MAPE=22.2%
+
+ACHTUNG: Wenn Shock-Period ausklammern: 1. herausfinden, wie ich das ende identifiziere. Ziv-Andrews bis nix mehr kommt?
+Dann: Neue Zeitreihe zusammenstöpseln. 
+Ziv-Andrews um zu checken ob bruch
+Stationarität etc. neu :(
+
+Dann modellieren
+
