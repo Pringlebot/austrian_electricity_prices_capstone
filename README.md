@@ -32,10 +32,10 @@ This project analyzes Austrian electricity day-ahead prices using ARIMA (AutoReg
 ## Project Status
 
 - [x] **Data Pipeline** (6/6 datasets integrated)
-- [ ] **Exploratory Data Analysis (EDA)**
-  - [ ] Univariate analysis of electricity prices
-  - [ ] Correlation analysis with external variables
-  - [ ] Stationarity testing (ADF, KPSS)
+- [X] **Exploratory Data Analysis (EDA)**
+  - [X] Visual analysis of electricity prices and exogenous Variables
+  - [X] Formal time-series decomposition and Analysis of electricity price
+  - [X] Correlation analysis with external variables
 - [ ] **ARIMA Model Implementation**
   - [ ] Parameter tuning (p,d,q)
   - [ ] Baseline model validation
