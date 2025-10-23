@@ -1,0 +1,92 @@
+TABLEAU DASHBOARD
+
+Story Point 1: Time Series Exploration (1.5 Min)
+
+**What to show:**
+- Variable 1: price_combined (electricity)
+- Variable 2: Toggle between oegpi_month (gas) and carbonprices_primary_market (CO2)
+- Highlight structural breaks at 2021-01 and 2023-03
+
+**Key Insights to narrate:**
+- Visual confirmation of three regimes
+- Gas prices mirror electricity price movements closely
+- KPIs visible: Mean, Std, CV for each period
+
+
+
+
+Story Point 2: Correlation Analysis (1.5 Min)
+
+- Scatter: price_combined (y) vs. oegpi_month (x)
+- Color by period: Pre-Shock (blue), Price Shock (red), Post-Shock (green)
+
+
+**Key Insights to narrate:**
+- Strong linear relationship (r=0.84) between electricity and gas
+- Relationship consistent across all three periods
+- Other variables tested: CO2 (r=0.45), Energy imports (r=0.84)
+- Multicollinearity problem: Gas + Energy imports (r=0.91)
+
+**Multikollinearitätsprobleme (|r| > 0.7):**
+- Gaspreis ↔ Energieimporte: r = 0.91
+- CO2 ↔ Wirtschaftsindikatoren: r = 0.72-0.88
+- Exporte ↔ Importe: r = 0.96
+- Climate HDD ↔ Renewables%: r = -0.85
+
+- → Gas chosen as primary predictor (cleaner interpretation)
+
+Story Point 3: Volatility Analysis (1 Min)
+
+- 12-month moving average (baseline)
+- Positive deviations (green area)
+- Negative deviations (red area)
+
+Point out deviations from that average
+
+
+Story Point 4: Modelling Results (2 Min)
+
+**What to show:**
+- Actual prices (black line, fixed)
+- Different models. 
+	- Persistence (same as yesterday: RMSE = 30.76) / Seasonal naive (same as last year RMSE = 56.42): Awful
+	- ARIMA only: Full period (2015-2023): ARIMA(2,1,0), RMSE = 28.40 - not very good, thinks its back in calm periods, cannot deal with increased volatility and cannot track trend
+	- ARIMA only: Shorter period (2020-2023): ARIMA(3,0,0), RMSE = 26.23  - better, actually tracks a slightly positive trend but still doesn´t adapt to volatility
+	Interpretation: Structural breaks destroyed autocorrelation patterns	
+
+	We need external variables:
+	- ARIMAX (3,0,0) with gas
+	- Gas only: RMSE = 21.14 is best model
+	- Tried Gas + CO2 = 25.64 (CO2 non-significant, p=0.58)
+	- Other models even worse
+	- Complete model not possible due to multicollinearity
+
+	-> Gas prices provide stable external signal → Better generalization
+		- AR/MA terms needed when external variable is this strong (Gas explains 83% of standardized variance), no variance left to be explained by AR/MA terms, no memory in time series left
+		- Simpler model, better interpretable
+
+Gas Price Coefficients:
+| Variable | Coef | Std Err | Beta | p-value | Sig |
+|----------|------|---------|------|---------|-----|
+| Constant | 43.84 | 4.33 | - | 0.323 | n.s. |
+| Gas price | 1.61 | 0.41 | 0.83 | <0.001 | *** |
+
+- Focus timeframe: "from 2024 onwards"
+- RMSE bars: Highlight train vs. test for both models
+
+Story Point 5: Model Performance (2 Min)
+
+**What to show:**
+- Model 1: Pred_ARIMAX_301_Gas (toggle on)
+- Model 2: Pred_ARIMAX_000_Gas (toggle on)
+
+Point out RMSE Bars: test and train for both models.
+
+- 95% CI: Show for final appraisal
+
+Key insight: 
+
+TO DO: 
+-) Where to put: why a difference term in my long-term ARIMA (2,1,0) model?
+-) Fix KPIs in Dashboard
+-) Fix Time Filters in Dashboard
