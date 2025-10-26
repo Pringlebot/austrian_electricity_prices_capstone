@@ -83,10 +83,3 @@ Story Point 5: Model Performance (2 Min)
 Point out RMSE Bars: test and train for both models.
 
 - 95% CI: Show for final appraisal
-
-Key insight: 
-
-TO DO: 
--) Where to put: why a difference term in my long-term ARIMA (2,1,0) model?
--) Fix KPIs in Dashboard
--) Fix Time Filters in Dashboard
