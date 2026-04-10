@@ -1,4 +1,4 @@
-# Python
+# Python: Bytecode, Caches, virtuelle Umgebungen
 __pycache__/
 *.py[cod]
 *$py.class
@@ -9,28 +9,39 @@ env/
 ENV/
 capstone_env/
 
-# Jupyter
+# Jupyter: Notebook-Checkpoints
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 
-# Data (optional - entscheide selbst)
+# Daten: alle CSV/XLSX standardmäßig blockiert,
+# aber zwei explizite Ausnahmen für die finalen Outputs
 *.csv
 *.xlsx
+!data/processed/data_consolidated.csv
+!**/meta_data_library.xlsx
+!**/meta_data_library_tableau.xlsx
+
+# Andere Daten- und Doku-Ordner, die nicht ins Repo sollen
 docs_ignore/
 Literature/
 docs/
 claude/
 data/raw/_ignore/
-data/processed/backup
+data/processed/backup/
 
-# IDE
+# IDE-Konfiguration
 .vscode/
 .idea/
 
-# OS
+# OS-Müll
 .DS_Store
 Thumbs.db
 
-# Backups
+# Backup-Dateien nach Namensschema
 *_backup.*
 *_OLD.*
+
+# Office- und Tableau Lock-/Temp-Dateien
+~$*
+~*.twbr
+*.hyper
